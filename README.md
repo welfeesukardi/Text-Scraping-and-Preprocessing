@@ -41,12 +41,10 @@ The repository supports both interactive exploration via Jupyter Notebook and au
 ```text
 Text-Scraping-and-Preprocessing/
 ├── data/
-│   ├── tmdb_movies.csv             # Raw TMDB movie dataset (100 movies)
-│   └── tmdb_preprocessed.csv       # Cleaned, stemmed, lemmatized, and POS-tagged dataset (98 movies)
+│   ├── tmdb_popular.csv            # Raw TMDB movie dataset
+│   └── tmdb_preprocessed.csv       # Cleaned, stemmed, lemmatized, and POS-tagged dataset
 ├── notebooks/
 │   └── Preprocessing_Rava_Welfee.ipynb  # Step-by-step interactive workflow with visualizations
-├── src/
-│   └── preprocess.py               # Standalone, reproducible CLI preprocessing script
 ├── .gitignore                      # Git ignore rules for caches, checkpoints, and environments
 ├── requirements.txt                # Pinned Python package dependencies
 └── README.md                       # Comprehensive repository documentation
@@ -189,22 +187,6 @@ nltk.download("universal_tagset")
 ```
 
 ## Usage
-
-### Method A: Execute the Command-Line Script
-
-Run the complete pipeline from terminal:
-
-```bash
-python src/preprocess.py
-```
-
-Optional CLI parameters:
-
-```bash
-python src/preprocess.py --input data/tmdb_movies.csv --output data/tmdb_preprocessed.csv --top-frequent 10
-```
-
-### Method B: Interactive Jupyter Notebook
 
 Launch Jupyter Notebook to inspect step-by-step code, intermediate tables, and word frequency charts:
 
